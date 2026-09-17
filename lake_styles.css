@@ -1,0 +1,80 @@
+﻿@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: 
+   Date:   
+   
+   Filename: lake_styles.css
+
+*/
+@font-face {
+   font-family: "champagne";
+   src: url("cac_champagne.woff")  format("woff");
+   
+}
+h1{
+   font-family: "champagne",cursive;
+   background-color: rgba(255, 174, 133, 0.2);
+}
+/*color of the background and text*/
+body{
+   display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap:10px;
+   background-color: rgb(251, 227, 215);
+   color: black;
+}
+body>header,body>footer{
+   grid-column: 1/-1;
+}
+/* Reset column widths and margins for Grid layout */
+body > section#leftcol, body > section#rightcol{
+   width:auto;
+   margin: 0;
+   float:none;
+}
+/*the background-color of the right column*/
+#rightcol{
+   background-color: rgba(255, 137, 87,0.1);
+}
+/*the text color of links in the right column */
+#rightcol a{
+   color:rgb(10, 105, 74);
+}
+#rightcol a:hover{
+   color:rgb(0, 199, 133);
+}
+#rightcol>nav>h2{
+   font-family: "champagne",cursive;
+}
+/* Set list markers in the right column */
+#rightcol ul{
+   list-style-type: square;
+}
+/* Add an opening quotation mark before the guest review */
+#rightcol blockquote::before{
+   content: '“';
+}
+/* Adjust spacing around the guest review */
+#rightcol blockquote{
+   padding:12px;
+   margin-top: 24px;
+}
+/* Use Flexbox for the header navigation */
+header > nav{
+   display: block;
+}
+header > nav > ul{
+   display: flex;
+   margin:0;
+   padding: 0;
+
+}
+header > nav > ul >li{
+   display: block;
+   flex:1;
+}
